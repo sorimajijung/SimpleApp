@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <title>Simple App</title>
+  </head>
+  <body>
+    <button id="btnMk">Make it</button>&nbsp;
+    <button id="btnCl">Clear</button><br />
+    <div id="result">
+    </div>
+
+<script>
+document.write('<script src=' +
+(navigator.appName.toLowerCase() == 'microsoft internet explorer'?'http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min':'js/zepto.min') +
+'.js><\/script>');
+</script>
+<script src="js/simple.js"></script>
+
+<script>
+  $('#btnMk').click(function()
+  {
+    SIMPLE.MakeIt($('#result'));
+  });
+  
+  $('#btnCl').click(function()
+  {
+    $('#result').html('');
+  });
+</script>
+  </body>
+</html>
